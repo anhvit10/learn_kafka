@@ -9,7 +9,6 @@ spring:
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
 
     consumer:
-      group-id: order-group
       auto-offset-reset: earliest
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
@@ -19,3 +18,7 @@ spring:
 kafka:
   topic:
     order: order-events
+  consumer:
+    group:
+      inventory: inventory-group
+      notification: notification-group
